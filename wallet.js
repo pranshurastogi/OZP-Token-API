@@ -1219,7 +1219,7 @@ app.post('/sendETH',(req,res) => {
   
   console.log("Transaction Object",txObject)
   
-  const tx = new Tx(txObject, { chain: 'ropsten', hardfork: 'petersburg' },)
+  const tx = new Tx(txObject, { chain: 'mainnet', hardfork: 'petersburg' },)
   console.log("tx obj",tx)
   tx.sign(privateKeyUS)
   const serializedTransaction = tx.serialize()
